@@ -1,0 +1,30 @@
+public class Personas {
+    public String nombre;
+    public int edad;
+
+    public Personas(String nombreInicial, int edadInicial) {
+        nombre = nombreInicial;
+        edad = edadInicial;
+    }
+
+    public void establecerNombre(String nuevoNombre) {
+        nombre = nuevoNombre;
+    }
+
+    public String obtenerNombre() {
+        return nombre;
+    }
+
+    public void establecerEdad(int nuevaEdad) {
+        edad = nuevaEdad;
+    }
+
+    public int obtenerEdad() {
+        return edad;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+    }
+}
