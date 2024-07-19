@@ -1,0 +1,90 @@
+//Esta es la superclase de Persona
+
+public abstract class Persona {
+    private String nombre;
+    private int edad;
+
+ 
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public abstract String obtenerProfesion();
+    public abstract String mostrarInformacion();
+}
+
+
+//esta es la subclase de Doctor
+
+public class Doctor extends Persona {
+    private String especialidad;
+
+    public Doctor(String nombre, int edad, String especialidad) {
+        super(nombre, edad);
+        this.especialidad = especialidad;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    @Override
+    public String obtenerProfesion() {
+        return "Doctor";
+    }
+
+    @Override
+    public String mostrarInformacion() {
+        return "Nombre: " + getNombre() + ", Edad: " + getEdad() + ", Profesión: Doctor, Especialidad: " + especialidad;
+    }
+}
+
+
+//Esta es la subclase de Deportista
+public class Deportista extends Persona {
+    private String deporte;
+
+    public Deportista(String nombre, int edad, String deporte) {
+        super(nombre, edad);
+        this.deporte = deporte;
+    }
+
+    public String getDeporte() {
+        return deporte;
+    }
+
+    public void setDeporte(String deporte) {
+        this.deporte = deporte;
+    }
+
+   
+    public String obtenerProfesion() {
+        return "Deportista";
+    }
+
+    
+    public String mostrarInformacion() {
+        return "Nombre: " + getNombre() + ", Edad: " + getEdad() + ", Profesión: Deportista, Deporte: " + deporte;
+    }
+}
